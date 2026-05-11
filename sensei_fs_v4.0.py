@@ -140,8 +140,6 @@ from PIL import Image
 # 🔑 CONFIG
 # -------------------------------
 
-#genai.configure(api_key="AIzaSyBCuMR_v2JOS5RH6Z1GinoRRipBUZ-CXP8")
-
 logo = Image.open("Sensei_v1.png")
 # -------------------------------
 # 🔐 API KEY SYSTEM
