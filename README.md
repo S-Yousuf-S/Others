@@ -1,18 +1,21 @@
-# 📚 Sensei: AI Study Companion
-
-<p align="center"><img src="./Assets/Sensei_v2.png" width="250" alt="Sensei Logo"/></p> 
-
-![Python](https://img.shields.io/badge/Language-Python%203.10+-blue)
-![GUI](https://img.shields.io/badge/Framework-Streamlit-FF4B4B)
-![AI](https://img.shields.io/badge/AI_Engine-Google%20Gemini-1A73E8)
-![Status](https://img.shields.io/badge/Status-Release%20v8.1-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-
 <div align="center">
+  
+  <img src="./Assets/Sensei_v2.png" width="220" alt="Sensei Logo"/>
+
+  <h1>📚 Sensei: AI Study Companion</h1>
+
+  <p>
+    <img src="https://img.shields.io/badge/Language-Python%203.10+-blue" alt="Python">
+    <img src="https://img.shields.io/badge/Framework-Streamlit-FF4B4B" alt="Streamlit">
+    <img src="https://img.shields.io/badge/AI_Engine-Google%20Gemini-1A73E8" alt="Gemini">
+    <img src="https://img.shields.io/badge/Status-Release%20v8.1-brightgreen" alt="Status">
+    <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
+  </p>
+
   <a href="https://sensei-study-companion.streamlit.app/">
     <img src="https://img.shields.io/badge/Open_in_Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Open in Streamlit">
   </a>
+  
 </div>
 
 ---
