@@ -56,7 +56,10 @@ from io import BytesIO
 # 🔑 CONFIG
 # -------------------------------
 
-logo = Image.open(".\Assets\Sensei_v1.png")
+# This automatically uses the correct slashes for whatever OS it is running on!
+image_path = os.path.join("Assets", "Sensei_v1.png")
+logo = Image.open(image_path)
+
 # -------------------------------
 # 🔐 API KEY SYSTEM
 # -------------------------------
