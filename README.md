@@ -1,5 +1,5 @@
 # 📚 Sensei: AI Study Companion
- 
+<p align="center"><img src="./Assets/Sensei_v2.png" width="250" alt="Sensei Logo"/></p> 
 ![Python](https://img.shields.io/badge/Language-Python%203.10+-blue)
 ![GUI](https://img.shields.io/badge/Framework-Streamlit-FF4B4B)
 ![AI](https://img.shields.io/badge/AI_Engine-Google%20Gemini-1A73E8)
