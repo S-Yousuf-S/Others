@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 <div align="center">
-  <a href="YOUR_STREAMLIT_APP_URL_HERE">
+  <a href="https://sensei-study-companion.streamlit.app/">
     <img src="[https://static.streamlit.io/badges/streamlit_badge_black_white.svg](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)" alt="Open in Streamlit">
   </a>
 </div>
@@ -20,7 +20,7 @@ Sensei runs on a Bring-Your-Own-Key (BYOK) model. You must possess a valid Googl
 ---
  
 <p align="center">
-  <img src="./assets/sensei_dojo_mode.png" width="100%" alt="Sensei App Showcase"/>
+  <img src="./Assets/sensei_dojo_mode.png" width="100%" alt="Sensei App Showcase"/>
 </p>
 <p align="center"><i>"Inspired by Tradition. Powered by Intelligence." — Dojo Mode UI shown above.</i></p>
 
