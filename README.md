@@ -6,6 +6,12 @@
 ![Status](https://img.shields.io/badge/Status-Release%20v8.1-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+<div align="center">
+  <a href="YOUR_STREAMLIT_APP_URL_HERE">
+    <img src="[https://static.streamlit.io/badges/streamlit_badge_black_white.svg](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)" alt="Open in Streamlit">
+  </a>
+</div>
+
 ---
 
 > **⚠️ API REQUIREMENT NOTICE:**
@@ -71,5 +77,77 @@ Ensure you have **Python 3.10+** installed.
  
 **1. Clone the repository and navigate to the directory:**
 ```bash
-git clone [https://github.com/S-Yousuf-S/Sensei-AI.git](https://github.com/S-Yousuf-S/Sensei-AI.git)
+git clone https://github.com/S-Yousuf-S/Sensei-AI.git
 cd Sensei-AI
+```
+
+**2. Create and activate a virtual environment (Recommended):**
+```bash
+python -m venv sensei_env
+# Windows:
+sensei_env\Scripts\activate
+# macOS / Linux:
+source sensei_env/bin/activate
+```
+ 
+**3. Install dependencies:**
+```bash
+pip install streamlit google-generativeai PyPDF2 python-pptx pillow
+```
+ 
+**4. Launch the application:**
+```bash
+streamlit run sensei_fs_v8.1.py
+```
+*(Once running, paste your Gemini API key into the sidebar to connect the engine).*
+ 
+---
+ 
+## 📈 Version History
+ 
+A selection of the key milestone versions shaping the current release.
+ 
+| Version | Focus | Notes |
+|---|---|---|
+| v1.0 | Core AI | Basic Streamlit chat interface linked to Gemini API. |
+| v4.2 | Ingestion | PDF and PPTX file reading capabilities added. |
+| v7.3 | The Interface | Implementation of "Dojo Mode" CSS and standard source expanders. |
+| v8.0 | File Structuring | Full support for `.ipynb` files including Markdown and Python code segregation. |
+| v8.1 | **Current** | **Text Normalization update** — advanced Regex for PDF paragraph stitching, chunk truncation limits, and isolated session IDs. |
+ 
+---
+
+## 🙋 Frequently Asked Questions
+
+**Q: Why doesn't Sensei use a Vector Database (like Pinecone or ChromaDB)?**<br>
+**A:** This is a deliberate architectural choice for Phase 1. By relying on lightweight JSON serialization and keyword-chunking, Sensei remains highly portable, requires zero cloud infrastructure, and serves as an excellent foundational study in how Retrieval-Augmented Generation (RAG) logic actually works under the hood.
+
+**Q: I got a `ResourceExhausted 429 Quota Exceeded` error. What happened?**<br>
+**A:** You are likely using the Free Tier of the Gemini API. Google currently limits the `gemini-3-flash` model to a specific number of requests per day on the free tier. Take a break, and your quota will reset shortly!
+
+**Q: Is my API key safe?**<br>
+**A:** Yes. Your API key is injected directly into the Streamlit session state and passed securely to Google's servers. It is never logged, saved to disk, or visible anywhere in the codebase. 
+
+**Q: Why do my PDF Source Expanders have so much text in them?**<br>
+**A:** Sensei is designed to over-retrieve rather than under-retrieve. If it finds a keyword, it grabs the surrounding paragraphs (the Context Window) to ensure Gemini has all the nuance needed to give you a complete answer. 
+
+**Q: Will you add support for Word or Excel files?**<br>
+**A:** Yes! Excel (`.xlsx`) and Word (`.docx`) integration is planned for the next major development phase.
+
+---
+
+## 🎯 Conclusion
+ 
+Sensei proves that you don't need highly complex, enterprise-level infrastructure to build an effective, AI-driven educational tool. By focusing on clean text parsing, smart prompt engineering, and a beautiful UI, static notes can be transformed into a dynamic mentor.
+ 
+---
+ 
+## 👤 Author
+ 
+**Yousuf S. R. Sakkaf**
+
+GitHub: [S-Yousuf-S](https://github.com/S-Yousuf-S)
+ 
+---
+ 
+⭐ *If you found this tool useful for your studies, consider leaving a star!*
