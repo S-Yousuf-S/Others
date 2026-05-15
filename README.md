@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://sensei-study-companion.streamlit.app/">
-    <img src="[https://static.streamlit.io/badges/streamlit_badge_black_white.svg](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)" alt="Open in Streamlit">
+    <img src="https://img.shields.io/badge/Open_in_Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Open in Streamlit">
   </a>
 </div>
 
