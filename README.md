@@ -39,7 +39,10 @@ Sensei runs on a Bring-Your-Own-Key (BYOK) model. You must possess a valid Googl
 Users can upload their study materials (Presentations, Code Notebooks, and PDF notes) and interrogate them via a conversational interface. Sensei provides a dual-layer response: a concise, AI-generated explanation, backed immediately by the raw, retrieved text from the user's own documents.
 
 The primary engineering goal of Phase 1 was to build a robust, transparent retrieval engine **without** relying on heavy Vector Databases, focusing instead on logic, string manipulation, chunking algorithms, and UI explainability.
- 
+> ### 📖 Architecture & Student Companion Guide
+> A comprehensive breakdown of the retrieval pipeline, prompt engineering logic, known limitations, and Phase 2 roadmap is fully documented for academic and supervisor review.
+> 
+> **[📄 View the full Sensei - Student Companion Guide (PDF) here](./Sensei%20-%20StudentCompanionGuide.pdf)** 
 ---
  
 ## 🚀 Core Features & Document Handling
