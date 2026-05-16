@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/Language-Python%203.10+-blue" alt="Python">
     <img src="https://img.shields.io/badge/Framework-Streamlit-FF4B4B" alt="Streamlit">
     <img src="https://img.shields.io/badge/AI_Engine-Google%20Gemini-1A73E8" alt="Gemini">
-    <img src="https://img.shields.io/badge/Status-Release%20v8.1-brightgreen" alt="Status">
+    <img src="https://img.shields.io/badge/Status-Release%20v9.0-brightgreen" alt="Status">
     <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
   </p>
 
