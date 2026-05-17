@@ -43,6 +43,7 @@ The primary engineering goal of Phase 1 was to build a robust, transparent retri
 > A comprehensive breakdown of the retrieval pipeline, prompt engineering logic, known limitations, and Phase 2 roadmap is fully documented for academic and supervisor review.
 > 
 > **[📄 View the full Sensei - Student Companion Guide (PDF) here](./Sensei%20-%20StudentCompanionGuide.pdf)** 
+
 ---
  
 ## 🚀 Core Features & Document Handling
@@ -51,7 +52,7 @@ The primary engineering goal of Phase 1 was to build a robust, transparent retri
 Sensei currently supports three highly distinct file formats, each requiring custom parsing logic:
 - **PDFs (`.pdf`):** Parsed using `PyPDF2`, with aggressive text normalization to repair broken sentences and format paragraph chunks.
 - **Jupyter Notebooks (`.ipynb`):** JSON-level extraction that cleanly separates Markdown text from executable Python code, rendering code in visually distinct formatting blocks.
-- **PowerPoint (`.pptx`):** Iterates through slide shapes to extract textual information from lectures and presentations.
+- **PowerPoint (`.pptx`):** Iterates through slide shapes to extract text. Features **Slide-Aware Parsing**, ensuring each slide acts as a self-contained atomic chunk (labeled `[Slide N]`) so content from different slides never bleeds together during retrieval.
 
 ### 🧠 The Dual-Layer Response Engine
 Instead of just giving an answer, Sensei proves its work:
@@ -70,10 +71,10 @@ A custom-built, premium CSS framework that overrides standard Streamlit styling.
  
 | Concern | Implementation |
 |---|---|
-| **Data Storage** | No Vector DBs. Uploaded files are text-extracted and serialized into local `documents_{session_id}.json` files for the duration of the runtime. |
+| **Data Storage** | No Vector DBs. Uploaded files are text-extracted and serialized into `sessions/documents_{session_id}.json` files to keep the root directory clean. |
 | **Retrieval Engine** | Keyword-based matching with stop-word filtering. Uses a sliding **Context Window** algorithm to grab adjacent text chunks, ensuring no information is cut off mid-sentence. |
 | **Notebook Safety** | Custom regex routines strip Base64-encoded images from Notebook markdown before rendering, preventing massive data blobs from cluttering the UI. |
-| **Session Isolation** | Implements `uuid` tagging for chat and document JSON files to ensure multi-tab or multi-user instances do not overwrite each other's data. |
+| **Session Isolation & Cleanup** | Implements `uuid` tagging to ensure multi-user instances do not overwrite each other's data. A time-based garbage collector automatically deletes abandoned sessions older than 2 hours. |
 | **Prompt Engineering** | System prompts strictly confine the LLM to answer *only* using the provided context, heavily reducing AI hallucination. |
  
 ---
