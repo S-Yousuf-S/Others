@@ -137,8 +137,17 @@ A selection of the key milestone versions shaping the current release.
 **Q: Is my API key safe?**<br>
 **A:** Yes. Your API key is injected directly into the Streamlit session state and passed securely to Google's servers. It is never logged, saved to disk, or visible anywhere in the codebase. 
 
+**Q: Can other users on the app see my uploaded study materials?**<br>
+**A:** No. `Sensei 9.0` uses UUID-namespaced sessions. Your uploaded document text and chat history are isolated to your specific browser session. Furthermore, session files older than 2 hours are automatically deleted from the server to ensure total data privacy.
+
+**Q: Is there a file size limit for uploads?**<br>
+**A:** Yes. To ensure smooth performance on cloud deployments (and prevent memory crashes), Sensei has a built-in soft guard of `10MB` for the combined extracted text payload per session. If your upload exceeds this, the app will display a friendly warning.
+
 **Q: Why do my PDF Source Expanders have so much text in them?**<br>
 **A:** Sensei is designed to over-retrieve rather than under-retrieve. If it finds a keyword, it grabs the surrounding paragraphs (the Context Window) to ensure Gemini has all the nuance needed to give you a complete answer. 
+
+**Q: Why don't images from my PowerPoint slides show up in the expander?**<br>
+**A:** For Phase 1, Sensei utilizes a lightweight text-extraction pipeline. While it perfectly reads and chunks all the text on your slides, images embedded in PowerPoint slides are not described or extracted. Multimodal image analysis is planned for future updates.
 
 **Q: Will you add support for Word or Excel files?**<br>
 **A:** Yes! Excel (`.xlsx`) and Word (`.docx`) integration is planned for the next major development phase.
