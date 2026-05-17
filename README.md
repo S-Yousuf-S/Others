@@ -109,11 +109,13 @@ pip install -r requirements.txt
 ```bash
 streamlit run sensei_fs_v9.0.py
 ```
->💡 Pro-Tip for Windows / Virtual Environment Users:
+
+> 💡 Pro-Tip for Windows / Virtual Environment Users:
 If your system throws a "command not found" error, or if you want to guarantee you are using the exact dependencies installed in your active virtual environment, use this command instead:
->```bash
+> ```bash
 python -m streamlit run sensei_fs_v9.0.py
 ```
+
 *(Once running, paste your Gemini API key into the sidebar to connect the engine).*
  
 ---
