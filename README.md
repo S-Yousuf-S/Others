@@ -101,12 +101,12 @@ source sensei_env/bin/activate
  
 **3. Install dependencies:**
 ```bash
-pip install streamlit google-generativeai PyPDF2 python-pptx pillow
+pip install -r requirements.txt
 ```
  
 **4. Launch the application:**
 ```bash
-streamlit run sensei_fs_v8.1.py
+streamlit run sensei_fs_v9.0.py
 ```
 *(Once running, paste your Gemini API key into the sidebar to connect the engine).*
  
@@ -122,7 +122,8 @@ A selection of the key milestone versions shaping the current release.
 | v4.2 | Ingestion | PDF and PPTX file reading capabilities added. |
 | v7.3 | The Interface | Implementation of "Dojo Mode" CSS and standard source expanders. |
 | v8.0 | File Structuring | Full support for `.ipynb` files including Markdown and Python code segregation. |
-| v8.1 | **Current** | **Text Normalization update** — advanced Regex for PDF paragraph stitching, chunk truncation limits, and isolated session IDs. |
+| v8.1 | RAG Engine Polish | Text Normalization update — advanced Regex for PDF paragraph stitching and chunk truncation limits. |
+| **v9.0** | **Phase 1 Release (Current)** | **Production Architecture** — Implemented isolated `sessions/` directory, 10MB upload guard, automated 2-hour session cleanup, and Unicode surrogate sanitization. |
  
 ---
 
